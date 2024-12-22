@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Debugify Studio provides the best solutions and tools for LuaU script development.">
+    <title>Debugify Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function changeLanguage(language) {
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-lang');
+                element.innerHTML = translations[language][key];
+            });
+        }
+
+        const translations = {
+            en: {
+                "hero-heading": "Welcome to Debugify Studio",
+                "hero-text": "We provide the best LuaU script development solutions",
+                "cta-button": "Our Services",
+                "about-heading": "About Us",
+                "about-text": "Debugify Studio specializes in LuaU script development. We provide optimized script solutions and tools for Roblox game developers. We offer all the support needed to write creative and efficient LuaU scripts.",
+                "service1-title": "Script Development",
+                "service1-text": "We develop advanced LuaU scripts to extend game features and create interactive content.",
+                "service2-title": "Game System Design",
+                "service2-text": "We use LuaU scripts to improve user experience and design complex game systems.",
+                "service3-title": "Feature Implementation",
+                "service3-text": "We implement various in-game features and systems using LuaU scripts to maximize the fun and efficiency of the game.",
+                "footer": "&copy; 2024 Debugify Studio. All rights reserved."
+            },
+            ko: {
+                "hero-heading": "Debugify Studio에 오신 것을 환영합니다",
+                "hero-text": "최고의 LuaU 스크립트 개발 솔루션을 제공합니다",
+                "cta-button": "우리의 서비스",
+                "about-heading": "About Us",
+                "about-text": "Debugify Studio는 LuaU 스크립트 개발에 특화된 스튜디오입니다. Roblox 게임 개발자들을 위해 최적화된 스크립트 솔루션과 도구를 제공합니다. 우리는 창의적이고 효율적인 LuaU 스크립트를 작성하는 데 필요한 모든 지원을 제공합니다.",
+                "service1-title": "스크립트 개발",
+                "service1-text": "게임의 기능을 확장하고, 인터랙티브한 콘텐츠를 생성할 수 있는 고급 LuaU 스크립트를 개발합니다.",
+                "service2-title": "게임 시스템 설계",
+                "service2-text": "LuaU 스크립트를 사용하여 사용자 경험을 개선하고, 복잡한 게임 시스템을 설계합니다.",
+                "service3-title": "기능 구현",
+                "service3-text": "게임 내 다양한 기능과 시스템을 LuaU 스크립트로 구현하여 게임의 재미와 효율성을 극대화합니다.",
+                "footer": "&copy; 2024 Debugify Studio. All rights reserved."
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <!-- 언어 전환 버튼 -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="changeLanguage('ko')">한국어</a></li>
+                <li><a href="#" onclick="changeLanguage('en')">English</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 메인 섹션 -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1 data-lang="hero-heading">Debugify Studio에 오신 것을 환영합니다</h1>
+            <p data-lang="hero-text">최고의 LuaU 스크립트 개발 솔루션을 제공합니다</p>
+            <a href="#services" class="cta-button" data-lang="cta-button">우리의 서비스</a>
+        </div>
+    </section>
+
+    <!-- About Us 섹션 -->
+    <section id="about">
+        <div class="container">
+            <h2 data-lang="about-heading">About Us</h2>
+            <p data-lang="about-text">Debugify Studio는 LuaU 스크립트 개발에 특화된 스튜디오입니다. Roblox 게임 개발자들을 위해 최적화된 스크립트 솔루션과 도구를 제공합니다. 우리는 창의적이고 효율적인 LuaU 스크립트를 작성하는 데 필요한 모든 지원을 제공합니다.</p>
+        </div>
+    </section>
+
+    <!-- Services 섹션 -->
+    <section id="services">
+        <div class="container">
+            <h2 data-lang="about-heading">Our Services</h2>
+            <div class="service-card">
+                <h3 data-lang="service1-title">스크립트 개발</h3>
+                <p data-lang="service1-text">게임의 기능을 확장하고, 인터랙티브한 콘텐츠를 생성할 수 있는 고급 LuaU 스크립트를 개발합니다.</p>
+            </div>
+            <div class="service-card">
+                <h3 data-lang="service2-title">게임 시스템 설계</h3>
+                <p data-lang="service2-text">LuaU 스크립트를 사용하여 사용자 경험을 개선하고, 복잡한 게임 시스템을 설계합니다.</p>
+            </div>
+            <div class="service-card">
+                <h3 data-lang="service3-title">기능 구현</h3>
+                <p data-lang="service3-text">게임 내 다양한 기능과 시스템을 LuaU 스크립트로 구현하여 게임의 재미와 효율성을 극대화합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+        <p data-lang="footer">&copy; 2024 Debugify Studio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
